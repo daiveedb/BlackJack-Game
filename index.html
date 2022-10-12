@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Jack</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div class="Begin" id="Begin">
+      <div class="opener">
+        <div class="info-form" id="info-form">
+          <form class="opening-form">
+            <h1>Welcome to BlackJack!</h1>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="player-name"
+              id="player-name"
+              required
+            />
+            <input
+              type="number"
+              placeholder="Enter your starting chips ($)"
+              class="player-chips"
+              id="player-chips"
+              step="200"
+              required
+            />
+            <input
+              type="submit"
+              value="START"
+              class="form-submit"
+              id="form-submit"
+            />
+          </form>
+        </div>
+
+        <div class="rules">
+          <h2>Rules:</h2>
+          <ul class="rules-list">
+            <li>
+              <p>You can draw cards within the number range 2-11</p>
+            </li>
+            <li><p>You start the game by drawing 2 cards</p></li>
+            <li>
+              <p>The aim of the game is to sum up your cards to exactly 21</p>
+            </li>
+            <li><p>If your cards surpass the 21 mark, you have lost</p></li>
+            <li>
+              <p>
+                If your cards have not sum up to 21, You will be allowed to draw
+                another card
+              </p>
+            </li>
+            <li>
+              <p>
+                If you start the game, You cannot "Cash Out" until you have
+                completed a round
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="game">
+      <h1>Black Jack Game</h1>
+      <p id="message-el">Want to play a round?</p>
+      <p id="cards-el">Cards:</p>
+      <p id="sum-el">Sum:</p>
+      <button id="start" onclick="startGame()">START GAME</button>
+      <br />
+      <button id="newCard" onclick="newCard()">NEW CARD</button>
+      <h3 id="player-el"></h3>
+      <button id="cash-out" onclick="cashOut()">CASH OUT</button>
+      <p id="final-message"></p>
+      <a href="#" class="rules-link" id="rules-link">Rules ?</a>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
